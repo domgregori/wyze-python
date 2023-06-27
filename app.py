@@ -46,7 +46,7 @@ def get_client():
     global cached_client
     now = time.time()
     if now > cached_client_expiration:
-        cached_client = Client(email=os.environ.get("WYZE_USER"), password=os.environ.get("WYZE_PASSWORD"))
+        cached_client = Client(email=os.environ.get("WYZE_USER"), password=os.environ.get("WYZE_PASSWORD"), totp_key=os.environ['WYZE_TOTP_KEY'])
         cached_client_expiration = now + cached_client_ttl
     return cached_client
 

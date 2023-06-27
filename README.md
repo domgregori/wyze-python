@@ -7,7 +7,7 @@ Think of this as a gateway to your local Wyze bulbs. It could be run on a Raspbe
 
 Run the server:
 ```
-> WYZE_USER=me@gmail.com WYZE_PASSWORD=mypassword python3 app.py
+> WYZE_USER=me@gmail.com WYZE_PASSWORD=mypassword WYZE_TOTP_KEY=my2fakey python3 app.py
 ```
 
 Go find your bulbs and try out some examples from the comfort of your browser:
